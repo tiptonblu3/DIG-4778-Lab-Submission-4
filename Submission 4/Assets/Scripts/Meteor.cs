@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Meteor : MonoBehaviour
 {
+    public bool falling = true;
     
     // Start is called before the first frame update
     void Start()
@@ -14,11 +15,14 @@ public class Meteor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * Time.deltaTime * 2f);
-
-        if (transform.position.y < -11f)
+        if (falling)
         {
-            Destroy(this.gameObject);
+            transform.Translate(Vector3.down * Time.deltaTime * 2f);
+
+            if (transform.position.y < -11f)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 
