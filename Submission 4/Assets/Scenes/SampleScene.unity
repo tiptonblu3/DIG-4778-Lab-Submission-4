@@ -620,7 +620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e179c68eb8ff4874488e1dc48fd8b570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  player: {fileID: 1027280944}
   rotationSpeed: 5
   orbitSpeed: 50
 --- !u!4 &479684976 stripped
@@ -721,7 +720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e179c68eb8ff4874488e1dc48fd8b570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  player: {fileID: 1027280944}
   rotationSpeed: 5
   orbitSpeed: 50
 --- !u!1001 &726462803
@@ -1369,7 +1367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e179c68eb8ff4874488e1dc48fd8b570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  player: {fileID: 1027280944}
   rotationSpeed: 5
   orbitSpeed: 50
 --- !u!1001 &1604210456
@@ -1465,7 +1462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e179c68eb8ff4874488e1dc48fd8b570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  player: {fileID: 1027280944}
   rotationSpeed: 5
   orbitSpeed: 50
 --- !u!1001 &1862755124
@@ -1561,7 +1557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e179c68eb8ff4874488e1dc48fd8b570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  player: {fileID: 1027280944}
   rotationSpeed: 5
   orbitSpeed: 50
 --- !u!1 &1996952075
@@ -1668,6 +1663,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1027280937}
+    - target: {fileID: 3424003524506236861, guid: 78da5bc7391e681469a6daeeda50dc41, type: 3}
+      propertyPath: playerconfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c2ff313f2d9b7c4c862d69c9b7f35cd, type: 2}
     - target: {fileID: 7158442464957206486, guid: 78da5bc7391e681469a6daeeda50dc41, type: 3}
       propertyPath: m_Name
       value: Player

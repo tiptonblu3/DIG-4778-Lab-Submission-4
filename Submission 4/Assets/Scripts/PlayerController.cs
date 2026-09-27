@@ -5,11 +5,9 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private PlayerConfig playerconfig;
     public GameObject laserPrefab;
 
-    private float speed = 6f;
-    private float horizontalScreenLimit = 10f;
-    private float verticalScreenLimit = 6f;
     private bool canShoot = true;
 
     public Vector2 moveInput; // Variable to store the player's movement input
@@ -35,11 +33,11 @@ public class Player : MonoBehaviour
 
     void Movement()
     {
-        rb.linearVelocity = moveInput.normalized * speed; // Set the player's Rigidbody linear velocity to move the player in the desired direction at the specified speed
+        rb.linearVelocity = moveInput.normalized * playerconfig.speed; // Set the player's Rigidbody linear velocity to move the player in the desired direction at the specified speed
 
         // Clamp the player's position within the screen limits
-        float clampedX = Mathf.Clamp(rb.position.x, -horizontalScreenLimit, horizontalScreenLimit); // Clamp the player's position within the horizontal screen limits
-        float clampedY = Mathf.Clamp(rb.position.y, -verticalScreenLimit, verticalScreenLimit); // Clamp the player's position within the vertical screen limits
+        float clampedX = Mathf.Clamp(rb.position.x, -playerconfig.horizontalLimit, playerconfig.horizontalLimit); // Clamp the player's position within the horizontal screen limits
+        float clampedY = Mathf.Clamp(rb.position.y, -playerconfig.verticalLimit, playerconfig.verticalLimit); // Clamp the player's position within the vertical screen limits
         rb.position = new Vector2(clampedX, clampedY); // Update the player's position to the clamped values to ensure they stay within the screen limits
 
     }

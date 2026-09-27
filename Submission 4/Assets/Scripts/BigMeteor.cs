@@ -15,13 +15,26 @@ public class BigMeteor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * Time.deltaTime * 0.5f);
+        Fall();
+        CheckBounds();
+        HealthCheck();
+    }
 
+    private void Fall()
+    {
+        transform.Translate(Vector3.down * Time.deltaTime * 0.5f);
+    }
+
+    private void CheckBounds()
+    {
         if (transform.position.y < -11f)
         {
             Destroy(this.gameObject);
         }
+    }
 
+    private void HealthCheck()
+    {
         if (hitCount >= 5)
         {
             Destroy(this.gameObject);
